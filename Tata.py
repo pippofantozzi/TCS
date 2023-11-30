@@ -1,7 +1,5 @@
 import pandas as pd
 import streamlit as st
-import json
-import numpy as np
 from streamlit_option_menu import option_menu
 from Performance_Sheet import *
 
@@ -90,21 +88,21 @@ if selected == "TCS DeepConsultant":
     if butt:
         st.header(f"Solution for {company_name}'s problem:")
         st.subheader('🥇Overall Solution:')
-        st.write(f"Based on our previous clients problems and successes, the best thing {company_name},",
-                 "can do is rellocate to Canary Wharf. Our financial services related clients have seen an increase in",
-                 f"30% for revenue, and a 40% increase in Networking, which is what {company_name} is looking for. A greater flexibility",
-                 "in home offices would allow for a smaller office space required with less costs, a decrease in transportation worries, and our",
-                 "clients have shown an increase in 20% of productivity, due to happier employees. If that is non-negotiable, we would suggest",
-                 "the area right in front of Canary Wharf Station next to the HSBC building for maximized networking and client connections")
+        st.write(f"One of the most effective ways we have solved this problem in the past, given this clients persona, objective, and problem is",
+                 "by making the space more attractive to employees, whilst reducing the unnecessary mundane office equipment. To be more precise,",
+                 "this client should make the office furniture more modern, comfortable, and appealing such as beige chairs with wooden legs and",
+                 "beige linen sofas in the middle. Include consumables for the employees such as a barista ready at the corner of the room.",
+                 "include more greenery to make the ambiance feel more like home and appeal to the employees. ")
         st.header('🏆PPP Maximization:')
         st.write(f'Based on the information given to us, and {company_name}s prefered PPP weights, the top 3 best things they can change are:')
         st.write("""
-                - Implement data analytics to monitor and control operational costs
-                - Increase budget allocation on marketing from 30 to 50
-                - Increase employee training and development from 10 hours to 25 hours
+                - Implement data analytics to monitor and control operational costs (Likely increase of 30% in profits)
+                - Implement energy efficient technologies (Likely Decrease of 15% Long term costs and Decrease of 40% in energy consumption)
+                - Increase employee training and development from 10 hours to 25 hours (Increasing employee engagement and increasing productivity and quality of jobs)
                 """)
-        st.write("Based on our trained ML models, this is the most effective change to your values and weighted PPP. With a likely 40%, increase",
-                 "increase in Profits, 25%, increase in sustainability metrics, and a 35%, increase in employee satisfaction")
+        st.write("Based on our trained ML models, this is the most effective change to your values and weighted PPP. With a likely 60%",
+                 "increase in Profits, 40%, increase in sustainability metrics, and a 25%, increase in employee satisfaction. (For these metrics alone,",
+                 "not including suggested general solution)")
 
 
 
