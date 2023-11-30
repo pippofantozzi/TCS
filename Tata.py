@@ -92,7 +92,11 @@ if selected == "TCS DeepConsultant":
                  "by making the space more attractive to employees, whilst reducing the unnecessary mundane office equipment. To be more precise,",
                  "this client should make the office furniture more modern, comfortable, and appealing such as beige chairs with wooden legs and",
                  "beige linen sofas in the middle. Include consumables for the employees such as a barista ready at the corner of the room.",
-                 "include more greenery to make the ambiance feel more like home and appeal to the employees. ")
+                 "include more greenery to make the ambiance feel more like home and appeal to the employees. The rooftop should be accessible for both",
+                 "coffee or cocktail visits during the evening. Consider implementing solar pannel windows leading to more sustainble energy consumption",
+                 "both decreasing costs and also increasing revenue from the selling of the energy supply. Include a sky lounge bar in the rooftop for",
+                 "employees to socialize and network with other employees in the building. Additionally, if there is enough capital, using one of the",
+                 "floors for a wellness and fitness center will increase employee satisfaction as well as increasing their energy in the workplace")
         st.header('🏆PPP Maximization:')
         st.write(f'Based on the information given to us, and {company_name}s prefered PPP weights, the top 3 best things they can change are:')
         st.write("""
