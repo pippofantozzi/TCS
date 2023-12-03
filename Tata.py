@@ -50,63 +50,86 @@ if selected == "TCS DeepConsultant":
     st.write(" ")
     first, second, third, fourth, fifth, sixth = st.columns(6)
     with first:
-        st.subheader('Profitability:')
-        st.table(most_recent['Profitability:\nWhat percentage of your budget is allocated to marketing and advertising?'])
+        st.subheader('LED:')
+        st.table(most_recent['Do you utilize LED lighting?'])
     with second:
-        st.subheader('Cost Management:')
-        st.table(most_recent['Cost Management:\nDo you utilize data analytics to monitor and control operational costs? (Yes/No)'])
+        st.subheader('HVAC:')
+        st.table(most_recent['Do you utilize HVAC System Optimization?'])
     with third:
-        st.subheader('Sustainability Practices:')
-        st.table(most_recent['Sustainability Practices:\nHow would you describe your waste management strategy? (Recycling, Reduction, None)'])
+        st.subheader('Renewable Energy:')
+        st.table(most_recent['Do you have some form of renewable energy system in place?'])
     with fourth:
-        st.subheader('Environmental Certifications:')
-        st.table(most_recent['Environmental Certifications:\nHave you implemented energy-efficient technologies in your operations? (Yes/No)'])
+        st.subheader('Smart Building:')
+        st.table(most_recent['Is your building considered a Smart Building?'])
     with fifth:
-        st.subheader('Community Engagement:')
-        st.table(most_recent['Community Engagement:\nHow many local community events or initiatives did your business participate in during the last year?'])
+        st.subheader('Water Consumption:')
+        st.table(most_recent['Are there low-flow fixtures in place for water consumption?'])
     with sixth:
-        st.subheader('Employee Satisfaction:')
-        st.table(most_recent['Employee Satisfaction:\nOn a scale of 1 to 5, how would your employees rate the effectiveness of internal communication?'])
+        st.subheader('Co-working:')
+        st.table(most_recent['How many Co-Working spaces do you have?'])
 
     st.write("")
     first, second, third, fourth = st.columns(4)
     with first:
-        st.subheader('Employee Development:')
-        st.table(most_recent['Employee Training and Development:\nHow many hours of training per month, on average, do you provide to each employee?'])
+        st.subheader('Fitness Center:')
+        st.table(most_recent['Does your building include a fitness center or some form of fitness membership nearby for its tenants?'])
     with second:
-        st.subheader('Customer Feedback:')
-        st.table(most_recent['Customer Feedback and Loyalty Programs:\nDo you use sentiment analysis tools to extract insights from customer feedback? (Yes/No)'])
+        st.subheader('Social Area:')
+        st.table(most_recent['Does your building include some sort of social area for the employees to network and socialize?'])
     with third:
-        st.subheader('Customer Satisfaction:')
-        st.table(most_recent['Customer Satisfaction Metrics:\nWhat channels do you primarily use to collect customer feedback? (Surveys, Social Media, Reviews)'])
+        st.subheader('Event Organization:')
+        st.table(most_recent['Are there events being organized for socializing and networking within your building?'])
     with fourth:
-        st.subheader('Innovation:')
-        st.table(most_recent['Innovation for Growth:\nHave you adopted any AI or automation technologies in your business processes? (Yes/No)'])
+        st.subheader('Budget:')
+        st.table(most_recent['What is your budget'])
 
 
     butt = st.button("🧠Analyze information and produce solution")
     if butt:
         st.header(f"Solution for {company_name}'s problem:")
-        st.subheader('🥇Overall Solution:')
-        st.write(f"One of the most effective ways we have solved this problem in the past, given this clients persona, objective, and problem is",
-                 "by making the space more attractive to employees, whilst reducing the unnecessary mundane office equipment. To be more precise,",
-                 "this client should make the office furniture more modern, comfortable, and appealing such as beige chairs with wooden legs and",
-                 "beige linen sofas in the middle. Include consumables for the employees such as a barista ready at the corner of the room.",
-                 "include more greenery to make the ambiance feel more like home and appeal to the employees. The rooftop should be accessible for both",
-                 "coffee or cocktail visits during the evening. Consider implementing solar pannel windows leading to more sustainble energy consumption",
-                 "both decreasing costs and also increasing revenue from the selling of the energy supply. Include a sky lounge bar in the rooftop for",
-                 "employees to socialize and network with other employees in the building. Additionally, if there is enough capital, using one of the",
-                 "floors for a wellness and fitness center will increase employee satisfaction as well as increasing their energy in the workplace")
-        st.header('🏆PPP Maximization:')
-        st.write(f'Based on the information given to us, and {company_name}s prefered PPP weights, the top 3 best things they can change are:')
-        st.write("""
-                - Implement data analytics to monitor and control operational costs (Likely increase of 30% in profits)
-                - Implement energy efficient technologies (Likely Decrease of 15% Long term costs and Decrease of 40% in energy consumption)
-                - Increase employee training and development from 10 hours to 25 hours (Increasing employee engagement and increasing productivity and quality of jobs)
-                """)
-        st.write("Based on our trained ML models, this is the most effective change to your values and weighted PPP. With a likely 60%",
-                 "increase in Profits, 40%, increase in sustainability metrics, and a 25%, increase in employee satisfaction. (For these metrics alone,",
-                 "not including suggested general solution)")
+        st.subheader('🥇Overall Solution with Weighted PPP Optimization:')
+        st.write("Based on our historical clients' problems and our most effective solutions, and based on our trained Machine Learning models,",
+                 "the most effective solution given the problem you described and the information/data about your building would be:")
+        st.write(f"""Occupancy Maximisation:
+* Floor Repurposing:
+    * Floor 17: Sky Lounge Bar
+    * Floor 16: Co-Working Space
+    * Floor 15: Co-Working Space
+    * Floor 5: Remain as Work Space
+    * Floor 4: Event Space/Conference Facilities
+    * Floor 3: Fitness and Wellness Centre
+Energy Efficiency Upgrades:
+* Lighting Upgrades:
+    * Switch to LED lighting, reducing energy consumption by up to 50% (or 300,000 kWh per year).
+* HVAC System Optimization:
+    * Reduce heating and cooling costs by 20-30%.
+    * Implement programmable thermostats for comfort and up to 15% energy savings.
+* Insulation and Windows:
+    * Improve insulation for 10-20% reduction in heating and cooling costs.
+* Renewable Energy:
+    * Implement solar panels for renewable energy, reducing reliance on the grid.
+* Smart Building Tech:
+    * Implement automation systems, IoT, and occupancy sensors for 10-20% additional energy savings.
+* Water Conservation:
+    * Install low-flow fixtures to reduce water consumption.
+
+
+Estimated Costs:
+* Entire Building Upgrades:
+    * Lighting Upgrades: $112,194 to $336,582
+    * HVAC System Optimization: $168,291 to $560,970
+    * Insulation and Windows: $280,485 to $1,121,940
+    * Renewable Energy (Solar): $3,000,000 to $7,500,000
+    * Smart Building Tech: $56,097 to $280,485
+    * Water Conservation: $50,000 to $200,000
+    * Total Estimated Cost: ≈$15,609,100
+* Designated Space (Entire Floor):
+    * Sky Lounge Bar (Fl 17): $1,719,300 to $2,865,500
+    * Co-Working Space (Fl 16-15): $1,286,850 to $2,573,700
+    * Remain as Work Space (Fl 5): Assumes existing setup
+    * Event Space (Fl 4): $1,146,200 to $2,292,400
+    * Fitness and Wellness (Fl 3): $1,432,750 to $2,292,400
+    * Total Estimated Cost: ≈$13,265,044""")
 
 
 
