@@ -116,7 +116,7 @@ Energy Efficiency Upgrades:
 
 Estimated Costs:
 * Entire Building Upgrades:
-    * Lighting Upgrades: $112,194 to $336,582
+    * Lighting Upgrades: ($) 112,194 to ($) 336,582
     * HVAC System Optimization: $168,291 to $560,970
     * Insulation and Windows: $280,485 to $1,121,940
     * Renewable Energy (Solar): $3,000,000 to $7,500,000
