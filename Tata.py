@@ -217,50 +217,44 @@ elif selected == "How It Works":
         """
         )
     st.subheader('Explain the DeepConsultant process, in 3 Steps:')
-    st.write('- **1) Input Data:** Two types of data will be needed to power the system, the first is text data',
-             'It should briefly describe who the client is, what is its overall situation and what it seeks to improve.',
-             'The second set of data should be features/inputs about the client which serve as powerful predictors for',
-             'predicting key metrics, such as profit, sustainability, or employee satisfaction. The data preferably should be inputted',
-             'via a form by the client and retrieved by the system with ease, but can also be inputted manually by TCS employees')
-    
-    tab = pd.DataFrame()
-    tab['Problem/Client Request'] = ["This client has come to us with the problem of inefficient space utilization in their commercial real estate portfolio. They are struggling to maximize the use of available space, leading to operational inefficiencies and increased costs."]
-    tab['Solution by TCS'] = ["Tata consultancy company might recommend a comprehensive space planning and optimization strategy. This involves assessing the current layout, identifying underutilized areas, and redesigning the space to enhance functionality. This could include implementing flexible workspaces, collaborative zones, and technology-driven solutions to make better use of the available square footage."]
-    st.table(tab)
-    
-    st.write('- **2) Sensitivity Analysis:** The features with predictive power are then passed through models which',
-             'individually predict the likely current profit, sustainability, and employee satisfaction of the property.',
-             'To get an aggregate understanding of the current state of the property in terms of PPP, the following objective',
-             'function can be used:')
-    # Display the objective function using LaTeX
-    st.latex(r'''
-            \text{Objective Function} = \left(\frac{c_e}{m_e}w_e + \frac{c_p}{m_p}w_p + \frac{c_s}{m_s}w_s\right)
-            ''')
-    tab = pd.DataFrame()
-    tab['Outputs'] = ['e','p','s']
-    tab['c'] = ['Current Employee Satis','Current Profit','Current Sustainability']
-    tab['m'] = ['Mean Employee Satis','Mean Profit','Mean Sustainability']
-    tab['w'] = ['Weight Employee Satis','Weight Profit','Weight Sustainability']
-    st.table(tab)
-    st.write('- With this function, we can get a number that expresses the overall PPP score of the property in its current state.',
-             'We can also tweak the weights to decide how important each P is in the PPP for this client. From this, we can perform Sensitivity Analysis, which is a measure of how the input features impact the outputs of the models.',
-             'This is useful as we can see what would be the most effective change that the client could do, to maximize his',
-             'PPP.')
-    st.write('- **3) Joined Knowledge:** The system then prompts the DeepConsultant with the text input of the problem, and further',
-             'feads it the rankings of what our models believe would have the biggest positive change in the clients weighted PPP.',
-             'This allows DeepConsultant to not only review how TCS top consultants solved a problem similar to this before in different scenarios',
-             'But it also has added information on pontential significant changes that TCS had not considered when solving these problems.',
-             'Thus giving a reliable and founded professional suggestion to the problem, with added information which could amplify the results even further')
-    
+    st.write("""
+**Problem Statement:**
+Tata Consultancy Services (TCS) wants a more effective way to provide solutions to their commercial real estate clients.
 
-    st.subheader('What data would TCS need to perfect DeepConsultant?')
-    st.write('- Assuming all the data is ready, building something like this would likely take a matter of days on skilled hands.',
-             'For a quick, well built model, all TCS would need is a csv with two columns (Client Problem/Our Complete Solution) which would contain all the',
-             'historical problem solving from TCS top consultants and their achievements. Assuming TCS already knows what generally good',
-             'indicators of successful PPP are, they would just need a massive dataset from all their past clients, with the input features, and their current PPPs.')
-    st.write('- Of course, this is not usually the case so it might take some time to preprocess past phone call data, emails and texts and documents to make them into a simple Problem -> Solution csv format.',
-             'Also getting the data of the input features could take a while if they dont have that already, and if they dont know what the good predictors are,',
-             'this can be discovered by Data Scientists, but again could take a while as well.')
+**Proposed Solution:**
+1. **Client Input Form:**
+   - Clients fill out a form with a written description of their real estate problem and provide predictive metrics related to profit, sustainability, and employee satisfaction.
+
+2. **AI Solution Components:**
+
+   a. **ChatGPT-like System (Generative AI):**
+      - This system understands the client's problem by analyzing the written description and leveraging TCS's historical problem-solving knowledge.
+      - Generates a written output suggesting a solution based on business expertise and past successes.
+
+   b. **Machine Learning Models (Non-generative AI):**
+      - Processes predictive metrics to predict profit, sustainability, and employee satisfaction.
+      - Performs sensitivity analysis to recommend the top 5 changes the client should make to optimize these metrics.
+
+   c. **Web Scraping Bot (Non-generative AI):**
+      - Extracts positive and negative reviews about the client's real estate from the internet.
+
+3. **Integration and Final Output (Generative AI):**
+   - Three outputs from the above components (ChatGPT-like, ML Models, Web Scraping) are passed to a final generative AI.
+   - This final AI generates a clear, written response for TCS:
+      - Part 1: Outlines the general solution based on historical knowledge and current problem description.
+      - Part 2: Recommends changes to predictive variables for optimal metrics and quantifies their impact.
+      - Part 3: Advises the client based on online reviews, suggesting improvements and areas to be cautious.
+
+**Explanation:**
+- **Generative AI:** This creates human-like text based on the input it receives. In this solution, the ChatGPT-like system and the final generative AI are generative components.
+
+- **Non-generative AI:** This involves data analysis, predictions, and information extraction. In this solution, the machine learning models and the web scraping bot fall into this category.
+
+**Key Points:**
+- *Generative AI is used for generating human-like responses and suggestions.*
+- *Non-generative AI is used for data processing, analysis, and information extraction.*
+
+This integrated solution allows TCS to efficiently understand client problems, optimize predictive metrics, and consider real-world feedback for comprehensive and effective recommendations in the commercial real estate domain.""")
     
 
 else:
